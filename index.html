@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPJMOVIES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .main-content {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .info-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .info-item {
+            margin: 10px 0;
+        }
+        .ad-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .ad-container iframe {
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FPJMOVIES</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '41b248193d36880a522911972d084a13',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//punctuationbandycontradict.com/41b248193d36880a522911972d084a13/invoke.js"></script>
+        </div>
+
+        <div>
+            <div class="gallery">
+                <div class="gallery-item" onclick="window.open('https://example.com', '_blank')">
+                    <img src="images/image1.PNG" alt="Movie 1">
+                </div>
+                <div class="gallery-item" onclick="window.open('https://example.com', '_blank')">
+                    <img src="images/image2.PNG" alt="Movie 2">
+                </div>
+                <div class="gallery-item" onclick="window.open('https://example.com', '_blank')">
+                    <img src="images/image3.PNG" alt="Movie 3">
+                </div>
+                <div class="gallery-item" onclick="window.open('https://example.com', '_blank')">
+                    <img src="images/image4.PNG" alt="Movie 4">
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h2>Device Information</h2>
+                <div id="deviceInfo"></div>
+                <h2>Geolocation</h2>
+                <div id="geolocation"></div>
+            </div>
+
+            <div class="ad-container" style="margin-top: 20px;">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'eea733ea895f3f1fdc4d439be7242f38',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//punctuationbandycontradict.com/eea733ea895f3f1fdc4d439be7242f38/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to generate random device info
+        function generateDeviceInfo() {
+            const devices = [
+                { type: 'iPhone', model: '13 Pro', os: 'iOS 15.4' },
+                { type: 'Samsung', model: 'Galaxy S21', os: 'Android 12' },
+                { type: 'Google', model: 'Pixel 6', os: 'Android 13' },
+                { type: 'OnePlus', model: '9 Pro', os: 'Android 12' }
+            ];
+            const browsers = ['Chrome', 'Firefox', 'Safari', 'Edge'];
+            const randomDevice = devices[Math.floor(Math.random() * devices.length)];
+            const randomBrowser = browsers[Math.floor(Math.random() * browsers.length)];
+            
+            return {
+                device: `${randomDevice.type} ${randomDevice.model}`,
+                os: randomDevice.os,
+                browser: randomBrowser,
+                screen: `${Math.floor(Math.random() * 1000) + 1000}x${Math.floor(Math.random() * 1000) + 1000}`,
+                language: ['en-US', 'en-GB', 'fr-FR', 'de-DE'][Math.floor(Math.random() * 4)]
+            };
+        }
+
+        // Function to generate random geolocation
+        function generateGeolocation() {
+            const cities = [
+                { city: 'New York', country: 'USA', lat: 40.7128, lon: -74.0060 },
+                { city: 'London', country: 'UK', lat: 51.5074, lon: -0.1278 },
+                { city: 'Tokyo', country: 'Japan', lat: 35.6762, lon: 139.6503 },
+                { city: 'Sydney', country: 'Australia', lat: -33.8688, lon: 151.2093 }
+            ];
+            return cities[Math.floor(Math.random() * cities.length)];
+        }
+
+        // Function to update device info and geolocation
+        function updateInfo() {
+            const deviceInfo = generateDeviceInfo();
+            const geolocation = generateGeolocation();
+            
+            document.getElementById('deviceInfo').innerHTML = `
+                <div class="info-item">Device: ${deviceInfo.device}</div>
+                <div class="info-item">Operating System: ${deviceInfo.os}</div>
+                <div class="info-item">Browser: ${deviceInfo.browser}</div>
+                <div class="info-item">Screen Resolution: ${deviceInfo.screen}</div>
+                <div class="info-item">Language: ${deviceInfo.language}</div>
+            `;
+            
+            document.getElementById('geolocation').innerHTML = `
+                <div class="info-item">City: ${geolocation.city}</div>
+                <div class="info-item">Country: ${geolocation.country}</div>
+                <div class="info-item">Latitude: ${geolocation.lat}</div>
+                <div class="info-item">Longitude: ${geolocation.lon}</div>
+            `;
+        }
+
+        // Initial update
+        updateInfo();
+
+        // Auto-refresh every minute
+        setInterval(() => {
+            location.reload();
+        }, 60000);
+    </script>
+</body>
+</html> 
